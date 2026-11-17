@@ -1,5 +1,4 @@
-import { ArrowRight, Download } from "lucide-react";
-import { siteConfig } from "../data/siteConfig";
+import { ArrowRight } from "lucide-react";
 import { projects } from "../data/projects";
 import { skillCategories } from "../data/skills";
 
@@ -17,16 +16,6 @@ const nowRows = [
   { label: "Features", value: "Cart, online checkout, delivery to the customer's location" },
   { label: "Learning", value: "Computer Systems & Networks" },
   { label: "Hosted on", value: "Vercel" },
-];
-
-const codeLines = [
-  { indent: 0, text: "const developer = {" },
-  { indent: 1, text: `name: "Cleopatra Samwel Andrea",` },
-  { indent: 1, text: `role: "Software Developer",` },
-  { indent: 1, text: `focus: "Web & Computer Networks",` },
-  { indent: 1, text: "stack: [React, Laravel, PostgreSQL]," },
-  { indent: 1, text: "curious: true," },
-  { indent: 0, text: "};" },
 ];
 
 const openTo = ["Software Developer", "Network Engineer", "Internship", "Remote"];
@@ -53,10 +42,6 @@ export default function Hero() {
               View Projects
               <ArrowRight size={16} />
             </a>
-            <a href={siteConfig.cvDownload} download className="btn-secondary !rounded-lg">
-              <Download size={16} />
-              Download CV
-            </a>
           </div>
 
           <dl className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
@@ -77,7 +62,7 @@ export default function Hero() {
             <span className="h-2 w-2 rounded-full bg-[#34d399]" aria-hidden="true" />
             Currently working on
           </div>
-          <dl className="divide-y divide-[var(--color-line)] px-5">
+          <dl className="divide-y divide-[var(--color-line)] px-5 pb-2">
             {nowRows.map((r) => (
               <div key={r.label} className="grid grid-cols-[5.5rem_1fr] gap-3 py-3 text-sm">
                 <dt className="mono text-xs uppercase tracking-wider text-[var(--color-muted)]">
@@ -87,15 +72,6 @@ export default function Hero() {
               </div>
             ))}
           </dl>
-          <div className="m-5 mt-2 rounded-lg bg-[var(--color-surface-2)] p-4">
-            <pre className="mono overflow-x-auto text-[12px] leading-6">
-              {codeLines.map((line, i) => (
-                <div key={i} style={{ paddingLeft: `${line.indent * 1.1}rem` }} className="whitespace-pre text-[#4C1D95]">
-                  {line.text}
-                </div>
-              ))}
-            </pre>
-          </div>
         </aside>
       </div>
 

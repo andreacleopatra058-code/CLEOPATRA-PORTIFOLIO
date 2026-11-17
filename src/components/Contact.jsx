@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Check, Copy, Download } from "lucide-react";
+import { Check, Copy, FileText } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./icons";
 import { siteConfig } from "../data/siteConfig";
 
@@ -51,8 +51,8 @@ export default function Contact() {
           <a href={siteConfig.github} target="_blank" rel="noreferrer" className={onDark}>
             <GithubIcon size={16} /> GitHub
           </a>
-          <a href={siteConfig.cvDownload} download className={onDark}>
-            <Download size={16} /> Download CV
+          <a href={siteConfig.cvPath} target="_blank" rel="noopener noreferrer" className={onDark}>
+            <FileText size={16} /> View CV
           </a>
         </div>
 

@@ -1,4 +1,4 @@
-import { Download, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./icons";
 import { navLinks, siteConfig } from "../data/siteConfig";
 
@@ -39,15 +39,6 @@ export default function Navbar() {
             <a href={`mailto:${siteConfig.email}`} aria-label="Email" className={iconLink}>
               <Mail size={16} />
             </a>
-            <a
-              href={siteConfig.cvDownload}
-              download
-              className="btn-ink !rounded-lg !px-3 !py-2 !text-[13px] sm:!px-4"
-            >
-              <Download size={14} />
-              <span className="hidden min-[420px]:inline">Download CV</span>
-              <span className="min-[420px]:hidden">CV</span>
-            </a>
           </div>
         </div>
       </div>
@@ -57,7 +48,7 @@ export default function Navbar() {
         aria-label="Sections"
         className="border-b border-[var(--color-line)] bg-[var(--color-surface-2)]"
       >
-        <ul className="container-page no-scrollbar flex gap-6 overflow-x-auto whitespace-nowrap">
+        <ul className="container-page no-scrollbar flex gap-6 overflow-x-auto whitespace-nowrap sm:justify-center">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a

@@ -1,20 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body: "Lora", Georgia, "Times New Roman", serif;
 
-  --color-ink: #1E2A45;
+  --color-ink: #111111;
   --color-surface: #FFFFFF;
-  --color-surface-2: #F6F5FA;
-  --color-surface-3: #EEF0FA;
-  --color-line: rgba(30, 42, 69, 0.08);
-  --color-text: #1E2A45;
-  --color-muted: #6B7280;
-  /* "cyan" and "blue" are legacy token names — now the purple and pink accents */
-  --color-cyan: #7C3AED;
-  --color-blue: #EC4899;
+  --color-surface-2: #F5F5F5;
+  --color-surface-3: #EEEEEE;
+  --color-line: rgba(17, 17, 17, 0.1);
+  --color-text: #111111;
+  --color-muted: #555555;
+  /* "cyan" is a legacy token name — now the black accent */
+  --color-cyan: #111111;
 }
 
 @layer base {
@@ -65,12 +63,12 @@
   .glass-panel {
     background-color: rgba(255, 255, 255, 0.85);
     border: 1px solid var(--color-line);
-    box-shadow: 0 8px 24px -8px rgba(30, 42, 69, 0.12);
+    box-shadow: 0 8px 24px -8px rgba(17, 17, 17, 0.12);
     backdrop-filter: blur(8px);
   }
 
   .gradient-text {
-    background-image: linear-gradient(90deg, var(--color-cyan), var(--color-blue));
+    background-image: linear-gradient(90deg, #111111, #333333);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -86,14 +84,14 @@
     font-weight: 600;
     font-size: 0.95rem;
     color: #ffffff;
-    background-image: linear-gradient(90deg, var(--color-cyan), var(--color-blue));
-    box-shadow: 0 8px 24px -8px rgba(124, 58, 237, 0.45);
+    background-image: linear-gradient(90deg, #111111, #333333);
+    box-shadow: 0 8px 24px -8px rgba(17, 17, 17, 0.45);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
 
   .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 28px -8px rgba(124, 58, 237, 0.6);
+    box-shadow: 0 12px 28px -8px rgba(17, 17, 17, 0.6);
   }
 
   .btn-secondary {
@@ -107,13 +105,13 @@
     font-size: 0.95rem;
     color: var(--color-text);
     border: 1px solid var(--color-line);
-    background-color: rgba(30, 42, 69, 0.03);
+    background-color: rgba(17, 17, 17, 0.03);
     transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
   }
 
   .btn-secondary:hover {
-    border-color: rgba(124, 58, 237, 0.5);
-    background-color: rgba(124, 58, 237, 0.06);
+    border-color: rgba(17, 17, 17, 0.5);
+    background-color: rgba(17, 17, 17, 0.06);
     transform: translateY(-2px);
   }
 
@@ -144,7 +142,7 @@
   }
 
   .eyebrow {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-family: var(--font-body);
     font-size: 0.72rem;
     font-weight: 600;
     letter-spacing: 0.16em;
@@ -174,11 +172,11 @@
   }
 
   .mono {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-family: var(--font-body);
   }
 
   .tag {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-family: var(--font-body);
     font-size: 0.7rem;
     border: 1px solid var(--color-line);
     background-color: var(--color-surface-2);
@@ -239,8 +237,8 @@
     .project-card:hover,
     .project-card:focus-within {
       transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 18px 36px -12px rgba(30, 42, 69, 0.22);
-      border-color: rgba(30, 42, 69, 0.16);
+      box-shadow: 0 18px 36px -12px rgba(17, 17, 17, 0.22);
+      border-color: rgba(17, 17, 17, 0.16);
     }
   }
 }

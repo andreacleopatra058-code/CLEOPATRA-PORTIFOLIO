@@ -32,21 +32,21 @@ const fireExtinguisherImages = sortByPath(
 );
 
 const medicubeImages = sortByPath(
-  import.meta.glob("../assets/images/projects/medicube-ecommerce/*.{jpg,jpeg,png}", {
+  import.meta.glob("../assets/images/projects/medicube_skincare/*.{jpg,jpeg,png}", {
     eager: true,
     import: "default",
   })
 );
 
 const powergridImages = sortByPath(
-  import.meta.glob("../assets/images/projects/powergrid-website/*.{jpg,jpeg,png}", {
+  import.meta.glob("../assets/images/projects/power_grid/*.{jpg,jpeg,png}", {
     eager: true,
     import: "default",
   })
 );
 
 const hospitalQueueImages = sortByPath(
-  import.meta.glob("../assets/images/projects/hospital-queue/*.{jpg,jpeg,png}", {
+  import.meta.glob("../assets/images/projects/hospital_queue/*.{jpg,jpeg,png}", {
     eager: true,
     import: "default",
   })
